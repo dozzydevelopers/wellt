@@ -73,14 +73,28 @@ if (file_exists($distFile) && !is_dir($distFile)) {
     serveStatic($distFile);
 }
 
-// ── Root: redirect or SPA ─────────────────────────────────────────────────────
+// ── Root → public/index.php ───────────────────────────────────────────────────
 if ($uri === '/' || $uri === '') {
+    $indexPhp = $publicDir . '/index.php';
+    if (file_exists($indexPhp)) {
+        chdir($publicDir);
+        include $indexPhp;
+        exit;
+    }
     if (file_exists($spaIndex)) {
         header('Content-Type: text/html; charset=utf-8');
         readfile($spaIndex);
         exit;
     }
     header('Location: ' . $basePath . '/login.php');
+    exit;
+}
+
+// ── Clean URL fallback: /faq → /faq.php, /about → /about.php etc. ────────────
+$cleanPhp = $publicDir . rtrim($uri, '/') . '.php';
+if (file_exists($cleanPhp)) {
+    chdir($publicDir);
+    include $cleanPhp;
     exit;
 }
 
@@ -93,4 +107,4 @@ if (file_exists($spaIndex)) {
 
 // ── 404 ───────────────────────────────────────────────────────────────────────
 http_response_code(404);
-echo '<!DOCTYPE html><html><head><title>404</title></head><body style="font-family:sans-serif;text-align:center;padding:60px"><h1>404 Not Found</h1><p><a href="' . htmlspecialchars($basePath . '/login.php') . '">Go to Login</a></p></body></html>';
+echo '<!DOCTYPE html><html><head><title>404 Not Found</title></head><body style="font-family:sans-serif;text-align:center;padding:60px"><h1>404 Not Found</h1><p><a href="' . htmlspecialchars($basePath . '/') . '">Go to Home</a></p></body></html>';
