@@ -85,14 +85,16 @@ $b = SITE_BASE;
   </div>
 </section>
 
-<!-- Why Forex -->
-<section style="background:#f8fafc;padding:80px 0">
-  <div class="container">
+<!-- Why Forex — with background image -->
+<section style="position:relative;padding:90px 0;background:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1600&q=80') center/cover no-repeat;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:rgba(1,18,60,0.82)"></div>
+  <div class="container" style="position:relative;z-index:1">
     <div class="text-center mb-5">
-      <div class="wf-section-badge mb-2">ADVANTAGES</div>
-      <h2 class="wf-h2">Why Trade Forex with Welthflow?</h2>
+      <div class="wf-section-badge mb-2" style="background:rgba(62,218,153,0.15);color:#3eda99;border-color:rgba(62,218,153,0.3)">ADVANTAGES</div>
+      <h2 style="font-family:'Lora',serif;color:#fff;font-size:32px;font-weight:700;margin-bottom:12px">Why Trade Forex with Welthflow?</h2>
+      <p style="color:rgba(255,255,255,0.75);max-width:560px;margin:0 auto">Invest in Forex and other high-performing investment packages on our intuitive platform.</p>
     </div>
-    <div class="row g-4">
+    <div class="row g-4 mb-5">
       <?php foreach([
         ['fa-globe','24/5 Global Market','The Forex market operates 24 hours a day, 5 days a week, providing continuous opportunities regardless of your time zone.'],
         ['fa-money-bill-trend-up','High Liquidity','With over $6.6 trillion traded daily, Forex is the world\'s most liquid market — ensuring your funds can always be accessed.'],
@@ -100,13 +102,23 @@ $b = SITE_BASE;
         ['fa-layer-group','Diversified Exposure','Trade across major, minor, and exotic currency pairs plus commodities and indices for a balanced, diversified portfolio.'],
       ] as [$icon,$title,$desc]): ?>
       <div class="col-md-6 col-lg-3">
-        <div class="wf-value-card">
-          <div class="wf-value-icon"><i class="fas <?=$icon?>"></i></div>
-          <h4 class="wf-value-title"><?=$title?></h4>
-          <p class="wf-value-desc"><?=$desc?></p>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:28px 22px;text-align:center;transition:background .2s;">
+          <div style="width:56px;height:56px;border-radius:50%;background:rgba(62,218,153,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+            <i class="fas <?=$icon?>" style="color:#3eda99;font-size:22px"></i>
+          </div>
+          <h4 style="font-family:'Lora',serif;color:#fff;font-size:16px;margin-bottom:10px"><?=$title?></h4>
+          <p style="color:rgba(255,255,255,0.7);font-size:14px;margin:0"><?=$desc?></p>
         </div>
       </div>
       <?php endforeach; ?>
+    </div>
+    <!-- View Certificate button -->
+    <div class="text-center">
+      <p style="color:rgba(255,255,255,0.7);font-size:14px;margin-bottom:16px">Welthflow is fully regulated by the FCA &amp; CySec. View our official regulatory certificate below.</p>
+      <a href="<?=$b?>/certificate.pdf" target="_blank" class="wf-btn-primary" style="margin-right:12px">
+        <i class="fas fa-certificate"></i> View Certificate
+      </a>
+      <a href="<?=$b?>/register.php" class="wf-btn-glass">Open Account</a>
     </div>
   </div>
 </section>
