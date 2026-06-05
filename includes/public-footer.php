@@ -35,7 +35,6 @@
           <ul class="wf-footer-contact">
             <li><i class="fas fa-map-marker-alt"></i> 8 Fitzroy Pl, Finnieston, Glasgow G3 7RH, United Kingdom.</li>
             <li><i class="fas fa-envelope"></i> <a href="mailto:admin@welthflow.com">admin@welthflow.com</a></li>
-            <li><i class="fab fa-whatsapp"></i> <a href="#">+447418611709</a></li>
           </ul>
         </div>
         <div class="col-lg-3 mb-4">
