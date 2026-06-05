@@ -50,8 +50,6 @@ foreach ($investments as $inv) {
     insert("INSERT INTO transactions (user_id,type,amount,description,status,reference) VALUES (?,?,?,?,?,?)",
         [$inv['user_id'], 'profit', $profit, "Daily profit - {$inv['plan_name']}", 'completed', $ref]);
 
-    insert("INSERT INTO notifications (user_id,title,message,type) VALUES (?,?,?,?)",
-        [$inv['user_id'], 'Daily Profit Credited', "Your daily profit of $".number_format($profit,2)." from {$inv['plan_name']} has been credited!", 'success']);
 
     $count++;
     $totalPaid += $profit;
