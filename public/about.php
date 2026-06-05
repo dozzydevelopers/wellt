@@ -94,7 +94,7 @@ $b = SITE_BASE;
       ] as [$name,$role,$img,$bio]): ?>
       <div class="col-md-6 col-lg-3">
         <div class="wf-team-card">
-          <img src="<?=$img?>" alt="<?=htmlspecialchars($name)?>" style="width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid #3eda99;margin-bottom:14px;display:block;margin-left:auto;margin-right:auto;">
+          <img src="<?=$img?>" alt="<?=htmlspecialchars($name)?>" style="width:56px;height:56px;border-radius:50%;object-fit:cover;border:3px solid #3eda99;margin:0 auto 14px;display:block;">
           <h4 class="wf-team-name"><?=$name?></h4>
           <p class="wf-team-role"><?=$role?></p>
           <p class="wf-team-bio"><?=$bio?></p>
