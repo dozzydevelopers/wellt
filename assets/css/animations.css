@@ -1,0 +1,582 @@
+/* ============================================================
+   WELTHFLOW — Page Animations & Enhanced UI
+   ============================================================ */
+
+/* ── Keyframes ─────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, .35);
+  }
+
+  50% {
+    box-shadow: 0 0 0 10px rgba(249, 115, 22, 0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -600px 0;
+  }
+
+  100% {
+    background-position: 600px 0;
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gradientShift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(.4);
+  }
+
+  55% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  75% {
+    transform: scale(.98);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+    max-height: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 200px;
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ── Page Wrapper Fade-in ──────────────────────────────────── */
+.dashboard-wrap,
+.auth-wrapper,
+.admin-body .admin-content {
+  animation: fadeIn .4s ease both;
+}
+
+/* ── Auth Card ─────────────────────────────────────────────── */
+.auth-card {
+  animation: scaleIn .45s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+.auth-logo {
+  animation: fadeInUp .5s .1s both;
+}
+
+.auth-title {
+  animation: fadeInUp .5s .15s both;
+}
+
+.auth-form .form-group {
+  animation: fadeInUp .45s both;
+}
+
+.auth-form .form-group:nth-child(1) {
+  animation-delay: .18s;
+}
+
+.auth-form .form-group:nth-child(2) {
+  animation-delay: .24s;
+}
+
+.auth-form .form-group:nth-child(3) {
+  animation-delay: .30s;
+}
+
+.auth-form .form-group:nth-child(4) {
+  animation-delay: .35s;
+}
+
+.auth-form .form-row:nth-child(1) {
+  animation: fadeInUp .45s .18s both;
+}
+
+.auth-form .form-row:nth-child(2) {
+  animation: fadeInUp .45s .24s both;
+}
+
+.auth-form .btn-primary {
+  animation: fadeInUp .45s .38s both;
+}
+
+/* ── Welcome Banner ────────────────────────────────────────── */
+.welcome-banner {
+  animation: slideDown .5s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+/* ── Balance Card ──────────────────────────────────────────── */
+.balance-card {
+  animation: slideInLeft .5s .1s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+.balance-amount {
+  animation: countUp .6s .3s both;
+}
+
+/* ── Side Mini Cards ───────────────────────────────────────── */
+.side-cards .mini-card:nth-child(1) {
+  animation: slideInRight .5s .15s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+.side-cards .mini-card:nth-child(2) {
+  animation: slideInRight .5s .25s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+/* ── Stats Section ─────────────────────────────────────────── */
+.stats-grid {
+  animation: fadeIn .4s .05s both;
+}
+
+/* ── Trader Cards ──────────────────────────────────────────── */
+.traders-grid .trader-card {
+  animation: fadeInUp .45s both;
+}
+
+.traders-grid .trader-card:nth-child(1) {
+  animation-delay: .1s;
+}
+
+.traders-grid .trader-card:nth-child(2) {
+  animation-delay: .18s;
+}
+
+.traders-grid .trader-card:nth-child(3) {
+  animation-delay: .25s;
+}
+
+.traders-grid .trader-card:nth-child(4) {
+  animation-delay: .32s;
+}
+
+/* ── Table Cards ───────────────────────────────────────────── */
+.table-card {
+  animation: fadeInUp .5s .2s both;
+}
+
+/* ── Referral Section ──────────────────────────────────────── */
+.referral-section {
+  animation: fadeInUp .5s .3s both;
+}
+
+/* ── Admin Stat Cards ──────────────────────────────────────── */
+.admin-stat-card {
+  animation: fadeInUp .45s both;
+}
+
+.admin-stats-grid .admin-stat-card:nth-child(1) {
+  animation-delay: .05s;
+}
+
+.admin-stats-grid .admin-stat-card:nth-child(2) {
+  animation-delay: .10s;
+}
+
+.admin-stats-grid .admin-stat-card:nth-child(3) {
+  animation-delay: .15s;
+}
+
+.admin-stats-grid .admin-stat-card:nth-child(4) {
+  animation-delay: .20s;
+}
+
+.admin-stats-grid .admin-stat-card:nth-child(5) {
+  animation-delay: .25s;
+}
+
+.admin-stats-grid .admin-stat-card:nth-child(6) {
+  animation-delay: .30s;
+}
+
+.admin-stats-grid .admin-stat-card:nth-child(7) {
+  animation-delay: .35s;
+}
+
+.admin-stats-grid .admin-stat-card:nth-child(8) {
+  animation-delay: .40s;
+}
+
+/* ── Admin Cards ───────────────────────────────────────────── */
+.admin-card {
+  animation: fadeInUp .5s .1s both;
+  transition: box-shadow .2s, transform .2s;
+}
+
+.admin-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, .1);
+}
+
+/* ── Announcement Bar ──────────────────────────────────────── */
+.announcement-bar {
+  animation: slideDown .5s .05s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+/* ── Section Headers ───────────────────────────────────────── */
+.section-header {
+  animation: fadeIn .4s .15s both;
+}
+
+/* ── Notifications / Badges ────────────────────────────────── */
+.notif-count {
+  animation: bounceIn .5s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+.badge {
+  animation: fadeIn .3s both;
+  transition: transform .15s;
+}
+
+.badge:hover {
+  transform: scale(1.08);
+}
+
+/* ── Sidebar ───────────────────────────────────────────────── */
+.sidebar,
+.admin-sidebar {
+  animation: slideInLeft .4s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+@media (max-width: 900px) {
+
+  .sidebar,
+  .admin-sidebar {
+    animation: none;
+  }
+}
+
+.sidebar-nav .nav-item,
+.admin-nav .admin-nav-item {
+  transition: background .15s, padding-left .15s, color .15s;
+}
+
+.sidebar-nav .nav-item:hover {
+  padding-left: 20px;
+}
+
+.admin-nav .admin-nav-item:hover {
+  padding-left: 20px;
+}
+
+/* ── Topbar ────────────────────────────────────────────────── */
+.topbar,
+.admin-topbar {
+  animation: slideDown .4s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+/* ── Buttons ───────────────────────────────────────────────── */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  transition: transform .15s, box-shadow .15s, filter .15s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, .4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, .25) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.btn-primary:hover::after {
+  opacity: 1;
+}
+
+.btn {
+  transition: transform .15s, box-shadow .15s, filter .15s;
+}
+
+.btn:hover {
+  filter: brightness(1.08);
+}
+
+/* ── Input focus ring ──────────────────────────────────────── */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, .18);
+  transition: box-shadow .2s;
+}
+
+/* ── Form card bounce ──────────────────────────────────────── */
+.form-group {
+  transition: transform .15s;
+}
+
+/* ── Alert animations ──────────────────────────────────────── */
+.alert {
+  animation: slideDown .4s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+/* ── Mobile Nav items ──────────────────────────────────────── */
+.mobile-nav {
+  animation: fadeInUp .4s .2s both;
+}
+
+.mobile-nav-item {
+  transition: color .2s, transform .2s;
+}
+
+.mobile-nav-item:hover {
+  transform: translateY(-3px);
+}
+
+.mobile-nav-item.active {
+  color: var(--primary);
+}
+
+/* ── Plan / Investment cards ───────────────────────────────── */
+.plan-card,
+.invest-card {
+  animation: fadeInUp .45s both;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.plan-card:hover,
+.invest-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, .12);
+}
+
+/* ── Table rows ────────────────────────────────────────────── */
+.data-table tbody tr,
+.admin-table tbody tr {
+  transition: background .15s;
+}
+
+/* ── Logo animated bar ─────────────────────────────────────── */
+.logo-bar,
+.logo-bar-sm {
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+/* ── Scroll-triggered (applied by animate.js) ──────────────── */
+.wf-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+
+.wf-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Loading shimmer for stats ─────────────────────────────── */
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 600px 100%;
+  animation: shimmer 1.5s infinite linear;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* ── Ticker bar ────────────────────────────────────────────── */
+.wf-ticker-wrap {
+  overflow: hidden;
+  background: linear-gradient(90deg, #0F172A, #1E293B);
+  padding: 7px 0;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.wf-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+  white-space: nowrap;
+}
+
+.wf-ticker span {
+  color: rgba(255, 255, 255, .7);
+  font-size: 12px;
+  padding: 0 32px;
+}
+
+.wf-ticker span strong {
+  color: #F97316;
+}
+
+.wf-ticker span.up {
+  color: #22C55E;
+}
+
+.wf-ticker span.down {
+  color: #EF4444;
+}
+
+/* ── Gradient logo text ────────────────────────────────────── */
+.logo-main {
+  background: linear-gradient(90deg, #fff 0%, #F97316 60%, #fff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* ── Number counter ────────────────────────────────────────── */
+.wf-counter {
+  display: inline-block;
+  animation: countUp .6s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+/* ── KYC / Status badges float ─────────────────────────────── */
+.kyc-badge {
+  transition: transform .2s, box-shadow .2s;
+}
+
+.kyc-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+}
+
+/* ── Avatar btn ────────────────────────────────────────────── */
+.avatar-btn {
+  transition: transform .2s, box-shadow .2s;
+}
+
+.avatar-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(249, 115, 22, .3);
+}
+
+/* ── User menu popup ───────────────────────────────────────── */
+.user-menu.open {
+  animation: scaleIn .25s cubic-bezier(.22, 1, .36, 1) both;
+  transform-origin: top right;
+}
+
+/* ── Page enter progress bar ───────────────────────────────── */
+.wf-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #F97316, #FCD34D);
+  z-index: 9999;
+  transition: width .3s ease;
+  border-radius: 0 3px 3px 0;
+}

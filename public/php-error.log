@@ -1,0 +1,8 @@
+[31-May-2026 06:38:04 UTC] PHP Fatal error:  Uncaught PDOException: could not find driver in C:\Users\gideo\Downloads\welthflow-complete\artifacts\welthflow\includes\db.php:24
+Stack trace:
+#0 C:\Users\gideo\Downloads\welthflow-complete\artifacts\welthflow\includes\db.php(24): PDO->__construct('sqlite:C:\\Users...', NULL, Object(SensitiveParameterValue), Array)
+#1 C:\Users\gideo\Downloads\welthflow-complete\artifacts\welthflow\includes\db.php(311): getDB()
+#2 C:\Users\gideo\Downloads\welthflow-complete\artifacts\welthflow\includes\db.php(318): query('SELECT id FROM ...', Array)
+#3 C:\Users\gideo\Downloads\welthflow-complete\artifacts\welthflow\public\register.php(35): fetchOne('SELECT id FROM ...', Array)
+#4 {main}
+  thrown in C:\Users\gideo\Downloads\welthflow-complete\artifacts\welthflow\includes\db.php on line 24
