@@ -1,6 +1,9 @@
 # Welthflow — Investment Platform
 **PHP 8.0+ | SQLite (built-in, no MySQL needed)**
 
+## Live Site
+🌐 **[https://e228dad0-e475-471a-b2f8-5d64c531f9e8-00-16wqiihd874yu.worf.replit.dev/welthflow/portal/login.php](https://e228dad0-e475-471a-b2f8-5d64c531f9e8-00-16wqiihd874yu.worf.replit.dev/welthflow/portal/login.php)**
+
 ## Requirements
 - PHP 8.0 or higher
 - PHP extensions: `pdo`, `pdo_sqlite`, `sqlite3` (enabled by default on most hosts)
